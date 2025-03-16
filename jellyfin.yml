@@ -16,3 +16,15 @@ services:
     ports:
       - 8096:8096
     restart: 'unless-stopped'
+  jellyseerr:
+    container_name: jellyseerr
+    image: fallenbagel/jellyseerr:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Singapore
+    volumes:
+      - /home/hercules/apps/jellyfin/config:/app/config
+    ports:
+      - 5055:5055
+    restart: unless-stopped
