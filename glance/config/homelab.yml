@@ -1,0 +1,23 @@
+- name: Homelab
+  center-vertically: true
+  columns:
+    - size: small
+    - size: full
+      widgets:
+        - type: monitor
+          cache: 1m
+          title: Services
+          sites:
+            - title: Jellyfin
+              url: http://192.168.18.18:8096
+              icon: si:jellyfin
+            - title: Jellyseerr
+              url: http://192.168.18.18:5055
+              icon: si:jellyfin
+            - title: qBittorrent
+              url: http://192.168.18.18:8080
+              icon: si:qbittorrent
+            - title: Home Assistant
+              url: http://192.168.18.18:8123
+              icon: si:homeassistant
+    - size: small
